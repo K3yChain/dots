@@ -24,9 +24,9 @@ install_apps() {
     brew_install "Cyberduck" "cyberduck" "caskroom/cask" "cask"
     brew_install "AppCleaner" "appcleaner" "caskroom/cask" "cask"
     brew_install "Growl Notify" "growlnotify" "caskroom/cask" "cask"
-
-
-
+    brew_install "iTerm2" "iterm2" "caskroom/cask" "cask"
+    brew_install "TextWrangler" "textwrangler" "caskroom/cask" "cask"
+    brew_install "Wondershare Video Converter Ultimate" "wondershare-video-converter-ultimate" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
