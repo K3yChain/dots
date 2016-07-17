@@ -1,14 +1,14 @@
 #!/bin/bash
 
-declare -r GITHUB_REPOSITORY="k3ychain/dotfiles"
+declare -r GITHUB_REPOSITORY="k3ychain/dots"
 
-declare -r DOTFILES_ORIGIN="curl -H 'Authorization: token fd3a3e09038586b2494de7066af410870f4d4ebf' -L https://github.com/repos/K3yChain/dotfiles.git"
-declare -r DOTFILES_TARBALL_URL="curl -H 'Authorization: token fd3a3e09038586b2494de7066af410870f4d4ebf' -L https://api.github.com/repos/K3yChain/dotfiles/tarball"
-declare -r DOTFILES_UTILS_URL="curl -H 'Authorization: token fd3a3e09038586b2494de7066af410870f4d4ebf' -LsS https://raw.githubusercontent.com/K3yChain/dotfiles/master/src/os/setup.sh"
+declare -r DOTFILES_ORIGIN="curl -H 'Authorization: token fd3a3e09038586b2494de7066af410870f4d4ebf' -L https://github.com/repos/K3yChain/dots.git"
+declare -r DOTFILES_TARBALL_URL="curl -H 'Authorization: token fd3a3e09038586b2494de7066af410870f4d4ebf' -L https://api.github.com/repos/K3yChain/dots/tarball"
+declare -r DOTFILES_UTILS_URL="curl -H 'Authorization: token fd3a3e09038586b2494de7066af410870f4d4ebf' -LsS https://raw.githubusercontent.com/K3yChain/dots/master/src/os/setup.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-declare dotfilesDirectory="$HOME/projects/dotfiles"
+declare dotfilesDirectory="$HOME/projects/dots"
 declare skipQuestions=false
 
 # ----------------------------------------------------------------------
