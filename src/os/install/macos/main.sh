@@ -8,3 +8,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./homebrew.sh
 ./bash.sh
 ./misc.sh
+./ui.sh
