@@ -18,7 +18,7 @@ install_apps() {
     
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "BetterTouchTool" "bettertouchtool "caskroom/cask" "cask"
+    brew_install "BetterTouchTool" "bettertouchtool" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
