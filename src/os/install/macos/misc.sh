@@ -14,6 +14,12 @@ install_apps() {
     
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    brew_install "CrashPlan" "crashplan" "caskroom/cask" "cask"
+    brew_install "DropBox" "dropbox" "caskroom/cask" "cask"
+    brew_install "Jaksta" "jaksta" "caskroom/cask" "cask"
+    
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
     brew_install "Chrome Canary" "google-chrome-canary" "caskroom/versions" "cask"
     brew_install "Chromium" "chromium" "caskroom/cask" "cask"
