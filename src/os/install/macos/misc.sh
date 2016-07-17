@@ -17,7 +17,10 @@ install_apps() {
     brew_install "CrashPlan" "crashplan" "caskroom/cask" "cask"
     brew_install "DropBox" "dropbox" "caskroom/cask" "cask"
     brew_install "Jaksta" "jaksta" "caskroom/cask" "cask"
-    
+    brew_install "VMWare Fusion" "vmware-fusion" "caskroom/cask" "cask"
+    brew_install "PolyMail" "polymail" "caskroom/cask" "cask"
+    brew_install "Remote Desktop Manager" "remote-desktop-manager" "caskroom/cask" "cask"
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
