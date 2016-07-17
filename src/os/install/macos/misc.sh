@@ -9,6 +9,15 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 install_apps() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    
+    brew_install "htop" "htop"
+    
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    brew_install "istat-menus" "istat-menus" "caskroom/cask" "cask"
+    
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
     brew_install "Chrome Canary" "google-chrome-canary" "caskroom/versions" "cask"
