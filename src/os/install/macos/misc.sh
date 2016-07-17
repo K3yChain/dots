@@ -20,6 +20,13 @@ install_apps() {
     brew_install "VMWare Fusion" "vmware-fusion" "caskroom/cask" "cask"
     brew_install "PolyMail" "polymail" "caskroom/cask" "cask"
     brew_install "Remote Desktop Manager" "remote-desktop-manager" "caskroom/cask" "cask"
+    brew_install "BitTorrent Sync" "bittorrent-sync" "caskroom/cask" "cask"
+    brew_install "Cyberduck" "cyberduck" "caskroom/cask" "cask"
+    brew_install "AppCleaner" "appcleaner" "caskroom/cask" "cask"
+    brew_install "Growl Notify" "growlnotify" "caskroom/cask" "cask"
+
+
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
