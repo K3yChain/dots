@@ -120,6 +120,8 @@ install_apps() {
     brew_install "Web Font Tools: TTF/OTF → WOFF (Zopfli)" "sfnt2woff-zopfli" "bramstein/webfonttools"
     brew_install "Web Font Tools: TTF/OTF → WOFF" "sfnt2woff" "bramstein/webfonttools"
     brew_install "Web Font Tools: WOFF2" "woff2" "bramstein/webfonttools"
+    brew_install "Font: Meslo LG for Powerline" "font-meslo-lg-for-powerline" "caskroom/cask" "cask"
+    brew_install "Font: Meslo LG" "font-meslo-lg" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
