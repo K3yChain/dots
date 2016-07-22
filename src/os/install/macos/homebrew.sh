@@ -70,6 +70,8 @@ main() {
 
     brew_update
     brew_upgrade
+    
+    print_info " Homebrew - Cask Taps"
     brew tap caskroom/fonts
 
 }
