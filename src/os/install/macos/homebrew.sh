@@ -70,6 +70,7 @@ main() {
 
     brew_update
     brew_upgrade
+    brew tap caskroom/fonts
 
 }
 
