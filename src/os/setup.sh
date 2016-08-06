@@ -291,11 +291,18 @@ main() {
         fi
 
     fi
-
+    
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     if ! $skipQuestions; then
-
+        print_info "Setup K3yChain Yadr"
+        ask_for_confirmation "Do you want to install K3yChain's custom yadr dotfiles?"
+        printf "\n"
+        
+        if answer_is_yes; then
+            sh -c "`curl -fsSL https://raw.githubusercontent.com/k3ychain/yadr/master/install.sh`"
+        fi
+        
         print_info "Restart"
 
         ask_for_confirmation "Do you want to restart?"
