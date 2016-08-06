@@ -80,8 +80,9 @@ execute "for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; 
                 '/System/Library/CoreServices/Menu Extras/Bluetooth.menu' \
                 '/System/Library/CoreServices/Menu Extras/AirPort.menu' \
                 '/System/Library/CoreServices/Menu Extras/Battery.menu' \
+                '/System/Library/CoreServices/Menu Extras/User.menu' \
                 '/System/Library/CoreServices/Menu Extras/Clock.menu'
         " \
-    "Hide Time Machine and Volume icons from the menu bar"
+    "Hide Time Machine, Volume, Bluetooth, Airport, Battery, User, Clock"
 
 killall "SystemUIServer" &> /dev/null
