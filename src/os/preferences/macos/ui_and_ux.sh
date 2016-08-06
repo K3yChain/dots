@@ -86,4 +86,4 @@ execute "sudo defaults write /Library/Preferences/com.apple.Bluetooth.plist Cont
 #        " \
 #    "Hide Time Machine and Volume icons from the menu bar"
 
-killall "SystemUIServer" &> /dev/null
+# killall "SystemUIServer" &> /dev/null
