@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo chown -R $(whoami) /usr/local
+
 cd "$(dirname "${BASH_SOURCE[0]}")" \
     && . "../../utils.sh" \
     && . "./utils.sh"
