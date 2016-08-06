@@ -27,6 +27,7 @@ install_apps() {
     brew_install "iTerm2" "iterm2" "caskroom/cask" "cask"
     brew_install "TextWrangler" "textwrangler" "caskroom/cask" "cask"
     brew_install "Wondershare Video Converter Ultimate" "wondershare-video-converter-ultimate" "caskroom/cask" "cask"
+    brew_install "SLACK" "slack" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
