@@ -2,6 +2,9 @@
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
+brew remove htop --force
+brew remove vim --force
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ./xcode.sh
