@@ -31,8 +31,6 @@ install_apps() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
-    brew_install "Chrome Canary" "google-chrome-canary" "caskroom/versions" "cask"
-    brew_install "Chromium" "chromium" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -56,32 +54,14 @@ install_apps() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "ImageAlpha" "imagealpha" "caskroom/cask" "cask"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    brew_install "ImageMagick" "imagemagick --with-webp"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    brew_install "ImageOptim" "imageoptim" "caskroom/cask" "cask"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     brew_install "LibreOffice" "libreoffice" "caskroom/cask" "cask"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    brew_install "LICEcap" "licecap" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # `Safari Technology Preview` requires macOS 10.11.4 or la
     # https://github.com/alrra/dotfiles/issues
 
-    if is_supported_version "$(get_os_version)" "10.11.4"; then
-        brew_install "Safari Technology Preview" "safari-technology-preview" "caskroom/versions" "cask"
-    fi
+    brew_install "Safari Technology Preview" "safari-technology-preview" "caskroom/versions" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -97,10 +77,6 @@ install_apps() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "Transmission" "transmission" "caskroom/cask" "cask"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     brew_install "Unarchiver" "the-unarchiver" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -109,11 +85,7 @@ install_apps() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "VirtualBox" "virtualbox" "caskroom/cask" "cask"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    brew_install "VLC" "vlc" "caskroom/cask" "cask"
+    brew_install "VirtualBox" "virtualbox" "caskroom/cask" "cask"   
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -128,9 +100,6 @@ install_apps() {
     brew_install "WebKit" "webkit-nightly" "caskroom/versions" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    brew_install "Zopfli" "zopfli"
-
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
