@@ -55,7 +55,7 @@ install_apps() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "LibreOffice" "libreoffice" "caskroom/cask" "cask"
+    # brew_install "LibreOffice" "libreoffice" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -70,7 +70,7 @@ install_apps() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "Spectacle" "spectacle" "caskroom/cask" "cask"
+    # brew_install "Spectacle" "spectacle" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -98,7 +98,7 @@ install_apps() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "WebKit" "webkit-nightly" "caskroom/versions" "cask"
+    # brew_install "WebKit" "webkit-nightly" "caskroom/versions" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 }
