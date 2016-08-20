@@ -9,24 +9,14 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 install_apps() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    
-    brew_install "Bartender" "bartender" "caskroom/cask" "cask"
-    
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "Alfred" "alfred" "caskroom/cask" "cask"
-    
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    brew_install "BetterTouchTool" "bettertouchtool" "caskroom/cask" "cask"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    brew_install "iStats Menus" "istat-menus" "caskroom/cask" "cask"
-    
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    brew_install "Little Snitch" "little-snitch" "caskroom/cask" "cask"
+    brew_install "htop" "htop"
+    brew_install "Growl Notify" "growlnotify" "caskroom/cask" "cask"
+    brew_install "FFmpeg" "ffmpeg"
+    brew_install "Git" "git"
+    brew_install "ShellCheck" "shellcheck"
+    brew_install "tmux" "tmux"
+    brew_install "Vim" "vim --override-system-vi"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -36,7 +26,7 @@ install_apps() {
 
 main() {
 
-    print_info " UI Related Apps"
+    print_info " Bash Related Apps"
 
     install_apps
 
