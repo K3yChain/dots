@@ -22,17 +22,11 @@ install_apps() {
     brew_install "iTerm2" "iterm2" "caskroom/cask" "cask"
     brew_install "TextWrangler" "textwrangler" "caskroom/cask" "cask"
     brew_install "SLACK" "slack" "caskroom/cask" "cask"
-    brew_install "Little Snitch" "little-snitch" "caskroom/cask" "cask"
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
     brew_install "Firefox" "firefox" "caskroom/cask" "cask"
     brew_install "Flash" "flash" "caskroom/cask" "cask"
     brew_install "GIMP" "lisanet-gimp" "caskroom/cask" "cask"
     brew_install "Unarchiver" "the-unarchiver" "caskroom/cask" "cask"
-    brew_install "Web Font Tools: TTF/OTF → WOFF (Zopfli)" "sfnt2woff-zopfli" "bramstein/webfonttools"
-    brew_install "Web Font Tools: TTF/OTF → WOFF" "sfnt2woff" "bramstein/webfonttools"
-    brew_install "Web Font Tools: WOFF2" "woff2" "bramstein/webfonttools"
-    brew_install "Font: Meslo LG for Powerline" "font-meslo-lg-for-powerline" "caskroom/cask" "cask"
-    brew_install "Font: Meslo LG" "font-meslo-lg" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
