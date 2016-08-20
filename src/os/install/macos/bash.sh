@@ -90,8 +90,8 @@ main() {
     brew_install "Bash" "bash" \
         && change_default_bash
 
+    brew_install "HTOP" "htop"
     brew_install "Bash Completion 2" "bash-completion2" "homebrew/versions"
-
 }
 
 main
