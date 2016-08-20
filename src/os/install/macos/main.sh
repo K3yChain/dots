@@ -9,3 +9,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./bash.sh
 ./misc.sh
 ./ui.sh
+./bash-apps.sh
