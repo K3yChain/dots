@@ -22,7 +22,11 @@ install_apps() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    brew_install "istat-menus" "istat-menus" "caskroom/cask" "cask"
+    brew_install "iStats Menus" "istat-menus" "caskroom/cask" "cask"
+    
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    brew_install "Little Snitch" "little-snitch" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
