@@ -22,6 +22,8 @@ create_symlinks() {
         "shell/inputrc"
         "shell/screenrc"
         "shell/tmux.conf"
+        
+        ".ssh/config"
 
         "git/gitattributes"
         "git/gitconfig"
