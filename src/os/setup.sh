@@ -302,7 +302,7 @@ main() {
         if answer_is_yes; then
             mkdir -p "/Users/nick/git"
             git clone "git@github.com:K3yChain/yadr.git" "/Users/nick/git/yadr"
-            /Users/nick/git/yadr/master/install.sh
+            /Users/nick/git/yadr/install.sh
         fi
         
         print_info "Restart"
