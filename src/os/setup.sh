@@ -300,7 +300,9 @@ main() {
         printf "\n"
         
         if answer_is_yes; then
-            sh -c "`curl -fsSL https://raw.githubusercontent.com/k3ychain/yadr/master/install.sh`"
+            mkdir -p "/Users/nick/git"
+            git clone "git@github.com:K3yChain/yadr.git" "/Users/nick/git/yadr"
+            /Users/nick/git/yadr/master/install.sh
         fi
         
         print_info "Restart"
