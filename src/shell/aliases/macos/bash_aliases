@@ -52,6 +52,13 @@ alias show-hidden-files="defaults write com.apple.finder AppleShowAllFiles -bool
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# SSH Aliases
+
+alias ncloud="ssh -lroot 10.0.1.100 -p 5720"
+alias vietnam="ssh -lroot vietnam272nd.com"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Lock screen
 
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
