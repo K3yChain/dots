@@ -2,9 +2,9 @@
 
 declare -r GITHUB_REPOSITORY="k3ychain/dots"
 
-declare -r DOTFILES_ORIGIN="curl -H 'Authorization: token ****' -L https://github.com/repos/K3yChain/dots.git"
-declare -r DOTFILES_TARBALL_URL="curl -H 'Authorization: token ****' -L https://api.github.com/repos/K3yChain/dots/tarball"
-declare -r DOTFILES_UTILS_URL="curl -H 'Authorization: token ****' -LsS https://raw.githubusercontent.com/K3yChain/dots/master/src/os/setup.sh"
+declare -r DOTFILES_ORIGIN="curl -H 'Authorization: token 303a05ac4ca585d5abe6442c9d07bb434b6b11d7' -L https://github.com/repos/K3yChain/dots.git"
+declare -r DOTFILES_TARBALL_URL="curl -H 'Authorization: token 303a05ac4ca585d5abe6442c9d07bb434b6b11d7' -L https://api.github.com/repos/K3yChain/dots/tarball"
+declare -r DOTFILES_UTILS_URL="curl -H 'Authorization: token 303a05ac4ca585d5abe6442c9d07bb434b6b11d7' -LsS https://raw.githubusercontent.com/K3yChain/dots/master/src/os/setup.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
