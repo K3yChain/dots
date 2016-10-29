@@ -27,6 +27,7 @@ install_apps() {
     brew_install "Flash" "flash" "caskroom/cask" "cask"
     brew_install "GIMP" "lisanet-gimp" "caskroom/cask" "cask"
     brew_install "The Unarchiver" "the-unarchiver" "caskroom/cask" "cask"
+    brew_install "Wondershare Video Converter Ultimate" "wondershare-video-converter-ultimate" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -38,8 +39,7 @@ install_apps() {
     # brew_install "LibreOffice" "libreoffice" "caskroom/cask" "cask" 
     # brew_install "VirtualBox" "virtualbox" "caskroom/cask" "cask"   
     # brew_install "Spectacle" "spectacle" "caskroom/cask" "cask"
-    # brew_install "Wondershare Video Converter Ultimate" "wondershare-video-converter-ultimate" "caskroom/cask" "cask"
-  
+    
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 }
