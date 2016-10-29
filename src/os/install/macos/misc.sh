@@ -14,7 +14,6 @@ install_apps() {
     brew_install "DropBox" "dropbox" "caskroom/cask" "cask"
     brew_install "Jaksta" "jaksta" "caskroom/cask" "cask"
     brew_install "VMWare Fusion" "vmware-fusion" "caskroom/cask" "cask"
-    brew_install "Remote Desktop Manager" "remote-desktop-manager" "caskroom/cask" "cask"
     brew_install "AirMail (Beta)" "Caskroom/versions/airmail-beta" "caskroom/cask" "cask"
     brew_install "Resilio Sync (Formerly Bittorrent Sync)" "resilio-sync" "caskroom/cask" "cask"
     brew_install "Cyberduck" "cyberduck" "caskroom/cask" "cask"
@@ -39,6 +38,8 @@ install_apps() {
     # brew_install "LibreOffice" "libreoffice" "caskroom/cask" "cask" 
     # brew_install "VirtualBox" "virtualbox" "caskroom/cask" "cask"   
     # brew_install "Spectacle" "spectacle" "caskroom/cask" "cask"
+	# brew_install "Remote Desktop Manager" "remote-desktop-manager" "caskroom/cask" "cask"
+
     
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
