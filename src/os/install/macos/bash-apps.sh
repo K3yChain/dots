@@ -11,7 +11,7 @@ install_apps() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     brew_install "Growl Notify" "growlnotify" "caskroom/cask" "cask"
-    # brew_install "FFmpeg" "ffmpeg"
+    brew_install "FFmpeg" "ffmpeg"
     brew_install "Git" "git"
     brew_install "ShellCheck" "shellcheck"
     brew_install "tmux" "tmux"
