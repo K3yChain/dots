@@ -26,8 +26,7 @@ install_apps() {
     brew_install "Flash" "flash-player" "caskroom/cask" "cask"
     brew_install "GIMP" "lisanet-gimp" "caskroom/cask" "cask"
     brew_install "The Unarchiver" "the-unarchiver" "caskroom/cask" "cask"
-    brew_install "Wondershare Video Converter Ultimate" "wondershare-video-converter-ultimate" "caskroom/cask" "cask"
-
+	
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Disabled Apps
@@ -39,6 +38,8 @@ install_apps() {
     # brew_install "VirtualBox" "virtualbox" "caskroom/cask" "cask"   
     # brew_install "Spectacle" "spectacle" "caskroom/cask" "cask"
 	# brew_install "Remote Desktop Manager" "remote-desktop-manager" "caskroom/cask" "cask"
+	# brew_install "Wondershare Video Converter Ultimate" "wondershare-video-converter-ultimate" "caskroom/cask" "cask"
+
 
     
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
