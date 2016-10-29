@@ -11,21 +11,9 @@ install_apps() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
     brew_install "Bartender" "bartender" "caskroom/cask" "cask"
-    
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     brew_install "Alfred" "alfred" "caskroom/cask" "cask"
-    
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     brew_install "BetterTouchTool" "bettertouchtool" "caskroom/cask" "cask"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     brew_install "iStats Menus" "istat-menus" "caskroom/cask" "cask"
-    
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     brew_install "Little Snitch" "little-snitch" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
