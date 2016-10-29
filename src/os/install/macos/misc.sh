@@ -24,7 +24,7 @@ install_apps() {
     brew_install "#Slack" "slack" "caskroom/cask" "cask"
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
     brew_install "Firefox" "firefox" "caskroom/cask" "cask"
-    brew_install "Flash" "flash" "caskroom/cask" "cask"
+    brew_install "Flash" "flash-player" "caskroom/cask" "cask"
     brew_install "GIMP" "lisanet-gimp" "caskroom/cask" "cask"
     brew_install "The Unarchiver" "the-unarchiver" "caskroom/cask" "cask"
     brew_install "Wondershare Video Converter Ultimate" "wondershare-video-converter-ultimate" "caskroom/cask" "cask"
