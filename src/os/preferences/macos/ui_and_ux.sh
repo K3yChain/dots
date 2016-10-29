@@ -59,11 +59,11 @@ execute "defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bo
 execute "defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true" \
     "Expand print panel by default"
 
-execute "sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string 'nMac' && \
-         sudo scutil --set ComputerName 'nMac' && \
-         sudo scutil --set HostName 'nMac' && \
-         sudo scutil --set LocalHostName 'nMac'" \
-    "Set computer name"
+#execute "sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string 'nMac' && \
+#         sudo scutil --set ComputerName 'nMac' && \
+#         sudo scutil --set HostName 'nMac' && \
+#         sudo scutil --set LocalHostName 'nMac'" \
+#    "Set computer name"
 
 execute "sudo systemsetup -setrestartfreeze on" \
     "Restart automatically if the computer freezes"
