@@ -26,6 +26,7 @@ install_apps() {
     brew_install "Flash" "flash-player" "caskroom/cask" "cask"
     brew_install "GIMP" "lisanet-gimp" "caskroom/cask" "cask"
     brew_install "The Unarchiver" "the-unarchiver" "caskroom/cask" "cask"
+	brew_install "VLC" "vlc" "caskroom/cask" "cask"
 	
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
