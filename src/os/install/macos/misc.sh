@@ -27,6 +27,8 @@ install_apps() {
     brew_install "GIMP" "lisanet-gimp" "caskroom/cask" "cask"
     brew_install "The Unarchiver" "the-unarchiver" "caskroom/cask" "cask"
 	brew_install "VLC" "vlc" "caskroom/cask" "cask"
+	brew_install "Spotify" "spotify" "caskroom/cask" "cask"
+
 	
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
