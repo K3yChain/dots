@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # For more information about the configurations used
 # in this file, please see the EditorConfig documentation:
+=======
+# For more information about the configurations used
+# in this file, please see the EditorConfig documentation.
+#
+>>>>>>> upstream/master
 # http://editorconfig.org
 
 root = true
@@ -19,7 +25,11 @@ trim_trailing_whitespace = true
 
 [*.md]
 
+<<<<<<< HEAD
 # Markdown uses the trailing whitespaces
+=======
+# Markdown uses the trailing whitespaces.
+>>>>>>> upstream/master
 # https://daringfireball.net/projects/markdown/syntax#block
 
 trim_trailing_whitespace = false
@@ -30,6 +40,7 @@ trim_trailing_whitespace = false
 
 indent_size = 2
 indent_style = space
+<<<<<<< HEAD
 =======
 root = true
 
@@ -40,3 +51,5 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 >>>>>>> B-master
+=======
+>>>>>>> upstream/master

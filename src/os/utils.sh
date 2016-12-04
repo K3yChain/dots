@@ -19,11 +19,15 @@ ask_for_confirmation() {
 
 ask_for_sudo() {
 
-    # Ask for the administrator password upfront
+    # Ask for the administrator password upfront.
+
     sudo -v &> /dev/null
 
-    # Update existing `sudo` time stamp until this script has finished
+    # Update existing `sudo` time stamp
+    # until this script has finished.
+    #
     # https://gist.github.com/cowboy/3118588
+
     while true; do
         sudo -n true
         sleep 60
@@ -59,7 +63,7 @@ execute() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # If the current process is ended,
-    # also end all its subprocesses
+    # also end all its subprocesses.
 
     set_trap "EXIT" "kill_all_subprocesses"
 
@@ -76,21 +80,21 @@ execute() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Show a spinner if the commands
-    # require more time to complete
+    # require more time to complete.
 
     show_spinner "$cmdsPID" "$CMDS" "$MSG"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Wait for the commands to no longer be executing
-    # in the background, and then get their exit code
+    # in the background, and then get their exit code.
 
     wait "$cmdsPID" &> /dev/null
     exitCode=$?
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Print output based on what happened
+    # Print output based on what happened.
 
     print_result $exitCode "$MSG"
 
@@ -160,20 +164,23 @@ is_supported_version() {
     declare -a v2=(${2//./ })
     local i=""
 
-    # Fill empty positions in v1 with zeros
+    # Fill empty positions in v1 with zeros.
     for (( i=${#v1[@]}; i<${#v2[@]}; i++ )); do
         v1[i]=0
     done
 
+
     for (( i=0; i<${#v1[@]}; i++ )); do
 
-        # Fill empty positions in v2 with zeros
+        # Fill empty positions in v2 with zeros.
         if [[ -z ${v2[i]} ]]; then
             v2[i]=0
         fi
 
         if (( 10#${v1[i]} < 10#${v2[i]} )); then
             return 1
+        elif (( 10#${v1[i]} > 10#${v2[i]} )); then
+            return 0
         fi
 
     done
@@ -195,7 +202,7 @@ mkd() {
 }
 
 print_error() {
-    print_in_red "  [✖] $1 $2\n"
+    print_in_red "   [✖] $1 $2\n"
 }
 
 print_error_stream() {
@@ -204,28 +211,31 @@ print_error_stream() {
     done
 }
 
+print_in_color() {
+    printf "%b" \
+        "$(tput setaf "$2" 2> /dev/null)" \
+        "$1" \
+        "$(tput sgr0 2> /dev/null)"
+}
+
 print_in_green() {
-    printf "\e[0;32m%b\e[0m" "$1"
+    print_in_color "$1" 2
 }
 
 print_in_purple() {
-    printf "\e[0;35m%b\e[0m" "$1"
+    print_in_color "$1" 5
 }
 
 print_in_red() {
-    printf "\e[0;31m%b\e[0m" "$1"
+    print_in_color "$1" 1
 }
 
 print_in_yellow() {
-    printf "\e[0;33m%b\e[0m" "$1"
-}
-
-print_info() {
-    print_in_purple "\n $1\n\n"
+    print_in_color "$1" 3
 }
 
 print_question() {
-    print_in_yellow "  [?] $1"
+    print_in_yellow "   [?] $1"
 }
 
 print_result() {
@@ -241,11 +251,11 @@ print_result() {
 }
 
 print_success() {
-    print_in_green "  [✔] $1\n"
+    print_in_green "   [✔] $1\n"
 }
 
 print_warning() {
-    print_in_yellow "  [!] $1\n"
+    print_in_yellow "   [!] $1\n"
 }
 
 set_trap() {
@@ -280,100 +290,61 @@ show_spinner() {
     local -r MSG="$3"
     local -r PID="$1"
 
-    local frameText=""
-    local frameTextLenght=0
     local i=0
-    local j=0
-    local numberOfLinesToBeCleared=0
-    local terminalWindowWidth=0
+    local frameText=""
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # For commands that require sudo, if the password needs to be
-    # provided, wait for the user to provide it before showing the
-    # actual spinner
-    #
-    # (this is kinda hacky, but yeah...)
+    # Note: In order for the Travis CI site to display
+    # things correctly, it needs special treatment, hence,
+    # the "is Travis CI?" checks.
 
-    if printf "%s" "$CMDS" | grep "sudo" &>/dev/null; then
-        while kill -0 "$PID" &>/dev/null \
-                && ! sudo -n true &> /dev/null; do
-            sleep 0.2
-        done
+    if [ "$TRAVIS" != "true" ]; then
+
+        # Provide more space so that the text hopefully
+        # doesn't reach the bottom line of the terminal window.
+        #
+        # This is a workaround for escape sequences not tracking
+        # the buffer position (accounting for scrolling).
+        #
+        # See also: https://unix.stackexchange.com/a/278888
+
+        printf "\n\n\n"
+        tput cuu 3
+
+        tput sc
+
     fi
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Display spinner while the commands are being executed
+    # Display spinner while the commands are being executed.
 
     while kill -0 "$PID" &>/dev/null; do
 
-        frameText="  [${FRAMES:i++%NUMBER_OR_FRAMES:1}] $MSG"
-        numberOfLinesToBeCleared=1
+        frameText="   [${FRAMES:i++%NUMBER_OR_FRAMES:1}] $MSG"
 
         # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        # Print frame text
+        # Print frame text.
 
-        printf "%s" "$frameText"
+        if [ "$TRAVIS" != "true" ]; then
+            printf "%s\n" "$frameText"
+        else
+            printf "%s" "$frameText"
+        fi
+
         sleep 0.2
 
         # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        # Clear frame text
+        # Clear frame text.
 
-        # Notes:
-        #
-        #  * After the content surpasses the initial terminal height
-        #    (the content forces the scroll), `tput sc` (save the cursor
-        #    position) and `tput rc` (restore the cursor position) will
-        #    no longer be reliable
-        #
-        # * `tput ed` (clear to end of screen) seems to also not always
-        #    be reliable
-        #
-        # So, in order to work around the shortcomings described above,
-        # the clearing of the previous printed content will have to be
-        # done "manually".
-
-        # The content may not fit into a single line so there is a
-        # need to determine on how many lines it is printed on and
-        # clear every single one of those lines
-
-        terminalWindowWidth=$(tput cols)
-        frameTextLenght=${#frameText}
-
-        if [ "$terminalWindowWidth" -lt "$frameTextLenght" ]; then
-            numberOfLinesToBeCleared=$(( numberOfLinesToBeCleared + ( frameTextLenght / terminalWindowWidth ) ))
-        fi
-
-        for j in $(seq 1 $numberOfLinesToBeCleared); do
-
-            # Clear current line
-
-            tput el     # Clear to end of line
-            tput el1    # Clear to beginning of line
-
-            # - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-            # The following line is just so that things look ok on
-            # the Travis CI site. The line isn't really needed, but
-            # also it doesn't do any harm. However, without it all
-            # the frames of the spinner will just be displayed one
-            # after the other in a single line.
-
+        if [ "$TRAVIS" != "true" ]; then
+            tput rc
+        else
             printf "\r"
-
-            # - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-            # Move up one line if the line containing the starting
-            # position of the content has not been reached
-
-            if [ "$j" -lt "$numberOfLinesToBeCleared" ]; then
-                tput cuu1
-            fi
-
-        done
+        fi
 
     done
 

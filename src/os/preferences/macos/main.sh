@@ -4,6 +4,13 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Close any open `System Preferences` panes in order to
+# avoid overriding the preferences that are being changed.
+
+./close_system_preferences_panes.applescript
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 ./app_store.sh
 ./chrome.sh
 ./dashboard.sh
@@ -20,4 +27,3 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./trackpad.sh
 ./transmission.sh
 ./ui_and_ux.sh
-./import-iterm-themes.sh

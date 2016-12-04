@@ -20,14 +20,12 @@ create_symlinks() {
         "shell/bashrc"
         "shell/curlrc"
         "shell/inputrc"
-        "shell/screenrc"
-        "shell/tmux.conf"
-        
-        ".ssh/config"
 
         "git/gitattributes"
         "git/gitconfig"
         "git/gitignore"
+
+        "tmux/tmux.conf"
 
         "vim/vim"
         "vim/vimrc"
@@ -87,7 +85,7 @@ create_symlinks() {
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 main() {
-    print_info "Create symbolic links"
+    print_in_purple "\n • Create symbolic links\n\n"
     create_symlinks "$@"
 }
 

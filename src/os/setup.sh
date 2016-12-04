@@ -1,14 +1,14 @@
 #!/bin/bash
 
-declare -r GITHUB_REPOSITORY="k3ychain/dots"
+declare -r GITHUB_REPOSITORY="alrra/dotfiles"
 
-declare -r DOTFILES_ORIGIN="curl -H 'Authorization: token 303a05ac4ca585d5abe6442c9d07bb434b6b11d7' -L https://github.com/repos/K3yChain/dots.git"
-declare -r DOTFILES_TARBALL_URL="curl -H 'Authorization: token 303a05ac4ca585d5abe6442c9d07bb434b6b11d7' -L https://api.github.com/repos/K3yChain/dots/tarball"
-declare -r DOTFILES_UTILS_URL="curl -H 'Authorization: token 303a05ac4ca585d5abe6442c9d07bb434b6b11d7' -LsS https://raw.githubusercontent.com/K3yChain/dots/master/src/os/setup.sh"
+declare -r DOTFILES_ORIGIN="git@github.com:$GITHUB_REPOSITORY.git"
+declare -r DOTFILES_TARBALL_URL="https://github.com/$GITHUB_REPOSITORY/tarball/master"
+declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/master/src/os/utils.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-declare dotfilesDirectory="$HOME/projects/dots"
+declare dotfilesDirectory="$HOME/projects/dotfiles"
 declare skipQuestions=false
 
 # ----------------------------------------------------------------------
@@ -48,6 +48,8 @@ download_dotfiles() {
     local tmpFile=""
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    print_in_purple "\n • Download and extract archive\n\n"
 
     tmpFile="$(mktemp /tmp/XXXXX)"
 
@@ -98,14 +100,12 @@ download_dotfiles() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Extract archive in the `dotfiles` directory
+    # Extract archive in the `dotfiles` directory.
 
     extract "$tmpFile" "$dotfilesDirectory"
     print_result $? "Extract archive" "true"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    # Remove archive
 
     rm -rf "$tmpFile"
     print_result $? "Remove archive"
@@ -157,7 +157,7 @@ verify_os() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Check if the OS is `macOS` and
-    # it's above the required version
+    # it's above the required version.
 
     os_name="$(uname -s)"
 
@@ -174,7 +174,7 @@ verify_os() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Check if the OS is `Ubuntu` and
-    # it's above the required version
+    # it's above the required version.
 
     elif [ "$os_name" == "Linux" ] && [ -e "/etc/lsb-release" ]; then
 
@@ -203,7 +203,7 @@ verify_os() {
 main() {
 
     # Ensure that the following actions
-    # are made relative to this file's path
+    # are made relative to this file's path.
 
     cd "$(dirname "${BASH_SOURCE[0]}")" \
         || exit 1
@@ -221,7 +221,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Ensure the OS is supported and
-    # it's above the required version
+    # it's above the required version.
 
     verify_os \
         || exit 1
@@ -237,15 +237,12 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Setup the `dotfiles` if needed
+    # Check if this script was run directly (./<path>/setup.sh),
+    # and if not, it most likely means that the dotfiles were not
+    # yet set up, and they will need to be downloaded.
 
-    if ! cmd_exists "git" \
-        || [ "$(git config --get remote.origin.url)" != "$DOTFILES_ORIGIN" ]; then
-
-        print_info "Download and extract archive"
-        download_dotfiles
-
-    fi
+    printf "%s" "${BASH_SOURCE[0]}" | grep "setup.sh" &> /dev/null \
+        || download_dotfiles
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -253,11 +250,11 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    if ! $skipQuestions; then
-        ./create_symbolic_links.sh
-    else
-        ./create_symbolic_links.sh -y
-    fi
+    ./create_symbolic_links.sh "$@"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    ./create_local_config_files.sh
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -278,21 +275,14 @@ main() {
         # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         if ! $skipQuestions; then
-
-            print_info "Update content"
-
-            ask_for_confirmation "Do you want to update the content from the 'dotfiles' directory?"
-            printf "\n"
-
-            if answer_is_yes; then
-                ./update_content.sh
-            fi
-
+            ./update_content.sh
         fi
 
     fi
-    
+
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 
     if ! $skipQuestions; then
         print_info "Setup K3yChain Yadr"

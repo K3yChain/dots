@@ -6,26 +6,30 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-main() {
+install_apps() {
 
-    update
-    upgrade
+    # Install tools for compiling/building software from source.
 
-    print_in_green "\n  ---\n\n"
+    install_package "Build Essential" "build-essential"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Tools for compiling/building software from source
-    install_package "Build Essential" "build-essential"
+    # GnuPG archive keys of the Debian archive.
 
-    # GnuPG archive keys of the Debian archive
     install_package "GnuPG archive keys" "debian-archive-keyring"
 
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     # Software which is not included by default
-    # in Ubuntu due to legal or copyright reasons
+    # in Ubuntu due to legal or copyright reasons.
+
     #install_package "Ubuntu Restricted Extras" "ubuntu-restricted-extras"
 
-    print_in_green "\n  ---\n\n"
+    printf "\n"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "Brotli" "brotli"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -101,7 +105,7 @@ main() {
 
     fi
 
-    # Automatically answer `Yes` to the `package configuration` prompt
+    # Automatically answer `Yes` to the `package configuration` prompt.
     # https://github.com/alrra/dotfiles/issues/17
 
     printf "opera-stable opera-stable/add-deb-source boolean true\n" \
@@ -133,10 +137,6 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "VirtualBox" "virtualbox"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     install_package "VLC" "vlc"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -147,15 +147,17 @@ main() {
 
     install_package "Zopfli" "zopfli"
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+}
 
-    print_in_green "\n  ---\n\n"
+main() {
+
+    print_in_purple "   Miscellaneous\n\n"
+
     update
     upgrade
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    print_in_green "\n  ---\n\n"
+    printf "\n"
+    install_apps
+    printf "\n"
     autoremove
 
 }

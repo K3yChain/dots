@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # [K3yChain](https://github.com/k3ychain)’s dotfiles
+=======
+# [Cătălin](https://github.com/alrra)’s dotfiles [![Build Status](https://travis-ci.org/alrra/dotfiles.svg?branch=master)](https://travis-ci.org/alrra/dotfiles)
+>>>>>>> upstream/master
 
 These are the base dotfiles that I start with when I set up a
 new environment. For more specific local needs I use the `.local`
@@ -15,9 +19,15 @@ terminal:
 understand [what it does](src/os/setup.sh). Seriously, **DON'T**!)
 
 | OS | Snippet |
+<<<<<<< HEAD
 |:---:|:---|
 | `macOS` | `bash -c "$(curl -LsS https://raw.github.com/k3ychain/dots/master/src/os/setup.sh)"` |
 | `Ubuntu` | `bash -c "$(wget -qO - https://raw.github.com/k3ychain/dots/master/src/os/setup.sh)"` |
+=======
+|:---|:---|
+| `macOS` | `bash -c "$(curl -LsS https://raw.github.com/alrra/dotfiles/master/src/os/setup.sh)"` |
+| `Ubuntu` | `bash -c "$(wget -qO - https://raw.github.com/alrra/dotfiles/master/src/os/setup.sh)"` |
+>>>>>>> upstream/master
 
 That's it! :sparkles:
 
@@ -45,10 +55,17 @@ Setup process in action:
     <tbody>
         <tr>
             <td>
+<<<<<<< HEAD
                 <img src="https://cloud.githubusercontent.com/assets/1223565/11821505/91e437be-a372-11e5-9500-025c316fe22c.gif" alt="Setup process on macOS" width="100%">
             </td>
             <td>
                 <img src="https://cloud.githubusercontent.com/assets/1223565/15118673/f41d9c8e-1615-11e6-9b25-5a4da543fef1.gif" alt="Setup process on Ubuntu" width="100%">
+=======
+                <img src="https://cloud.githubusercontent.com/assets/1223565/19314446/cd89a592-90a2-11e6-948d-9d75247088ba.gif" alt="Setup process on Ubuntu" width="100%">
+            </td>
+            <td>
+                <img src="https://cloud.githubusercontent.com/assets/1223565/19048636/e23e347a-89af-11e6-853c-98616b75b6ae.gif" alt="Setup process on Ubuntu" width="100%">
+>>>>>>> upstream/master
             </td>
         </tr>
         <tr align="center">
@@ -130,28 +147,45 @@ requirements by using the following files:
 
 #### `~/.bash.local`
 
+<<<<<<< HEAD
 If the `~/.bash.local` file exists, it will be automatically sourced
 after all the other [`bash` related files](src/shell), thus, allowing
+=======
+The `~/.bash.local` file it will be automatically sourced after
+all the other [`bash` related files](src/shell), thus, allowing
+>>>>>>> upstream/master
 its content to add to or overwrite the existing aliases, settings,
 PATH, etc.
 
 Here is a very simple example of a `~/.bash.local` file:
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
 #!/bin/bash
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+<<<<<<< HEAD
 # Set local aliases
+=======
+# Set local aliases.
+>>>>>>> upstream/master
 
 alias starwars="telnet towel.blinkenlights.nl"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+<<<<<<< HEAD
 # Set PATH additions
 
 PATH="/usr/local/bin:$PATH"
+=======
+# Set PATH additions.
+
+>>>>>>> upstream/master
 PATH="$PATH:$HOME/projects/dotfiles/src/bin"
 
 export PATH
@@ -160,6 +194,7 @@ export PATH
 
 #### `~/.gitconfig.local`
 
+<<<<<<< HEAD
 If the `~/.gitconfig.local` file exists, it will be automatically
 included after the configurations from `~/.gitconfig`, thus, allowing
 its content to overwrite or add to the existing `git` configurations.
@@ -169,6 +204,26 @@ as the `git` user credentials, e.g.:
 
 ```bash
 [user]
+=======
+The `~/.gitconfig.local` file it will be automatically included
+after the configurations from `~/.gitconfig`, thus, allowing its
+content to overwrite or add to the existing `git` configurations.
+
+__Note:__ Use `~/.gitconfig.local` to store sensitive information
+such as the `git` user credentials, e.g.:
+
+```bash
+[commit]
+
+    # Sign commits using GPG.
+    # https://help.github.com/articles/signing-commits-using-gpg/
+
+    gpgsign = true
+
+
+[user]
+
+>>>>>>> upstream/master
     name = Cătălin Mariș
     email = alrra@example.com
     signingkey = XXXXXXXX
@@ -176,8 +231,13 @@ as the `git` user credentials, e.g.:
 
 #### `~/.vimrc.local`
 
+<<<<<<< HEAD
 If the `~/.vimrc.local` file exists, it will be automatically sourced
 after `~/.vimrc`, thus, allowing its content to add or overwrite the
+=======
+The `~/.vimrc.local` file it will be automatically sourced after
+`~/.vimrc`, thus, allowing its content to add or overwrite the
+>>>>>>> upstream/master
 settings from `~/.vimrc`.
 
 
@@ -206,6 +266,7 @@ Inspiration and code was taken from many sources, including:
 ## License
 
 The code is available under the [MIT license](LICENSE.txt).
+<<<<<<< HEAD
 =======
 # Mathias’s dotfiles
 
@@ -318,3 +379,5 @@ Suggestions/improvements
 * [Haralan Dobrev](http://hkdobrev.com/)
 * anyone who [contributed a patch](https://github.com/mathiasbynens/dotfiles/contributors) or [made a helpful suggestion](https://github.com/mathiasbynens/dotfiles/issues)
 >>>>>>> B-master
+=======
+>>>>>>> upstream/master

@@ -17,11 +17,13 @@ alias ll="ls -l"
 alias m="man"
 alias map="xargs -n1"
 alias n="npm"
+alias path='printf "%b\n" "${PATH//:/\\n}"'
 alias q="exit"
 alias rm="rm -rf --"
+alias t="tmux"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Load OS specific aliases
+# Load OS specific aliases.
 
 . "aliases/$OS/bash_aliases"

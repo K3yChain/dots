@@ -5,12 +5,9 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-print_info "Install applications"
+print_in_purple "\n • Installs\n\n"
 
 "./$(get_os)/main.sh"
-# Optional - Node Version Manager & Packages
-#./nvm.sh
-#./npm_packages.sh
-
-# VIM Plugins
-./vim_plugins.sh
+./nvm.sh
+./npm.sh
+./vim.sh
