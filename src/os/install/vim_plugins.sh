@@ -45,7 +45,7 @@ update_plugins() {
 
 main() {
 
-    print_info " Vim"
+    print_in_purple " Vim"
 
     install_plugins
     update_plugins
