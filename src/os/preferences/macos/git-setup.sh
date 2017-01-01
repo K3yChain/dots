@@ -6,7 +6,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 main() {
 
-    print_info " Nick's GIT Setup"
+    print_in_purple " Nick's GIT Setup"
 
 }
 
