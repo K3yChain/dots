@@ -285,7 +285,7 @@ main() {
 
 
     if ! $skipQuestions; then
-        print_info "Setup K3yChain Yadr"
+        print_in_purple "Setup K3yChain Yadr"
         ask_for_confirmation "Do you want to install K3yChain's custom yadr dotfiles?"
         printf "\n"
         
@@ -295,7 +295,7 @@ main() {
             /Users/nick/git/yadr/install.sh
         fi
         
-        print_info "Restart"
+        print_in_purple "Restart"
 
         ask_for_confirmation "Do you want to restart?"
         printf "\n"
