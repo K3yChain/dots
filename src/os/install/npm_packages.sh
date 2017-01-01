@@ -38,7 +38,7 @@ update_npm() {
 
 main() {
 
-    print_in_purple " npm"
+	print_in_purple "\n   npm\n\n"
 
     update_npm
     printf "\n"
