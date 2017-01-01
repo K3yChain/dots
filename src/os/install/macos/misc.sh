@@ -54,7 +54,7 @@ install_apps() {
 
 main() {
 
-    print_in_purple " Miscellaneous Apps & Features"
+    print_in_purple "\n   Miscellaneous Apps & Features\n\n"
 
     install_apps
 
