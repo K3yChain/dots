@@ -1,14 +1,14 @@
 #!/bin/bash
 
-declare -r GITHUB_REPOSITORY="alrra/dotfiles"
+declare -r GITHUB_REPOSITORY="k3ychain/dots"
 
-declare -r DOTFILES_ORIGIN="git@github.com:$GITHUB_REPOSITORY.git"
-declare -r DOTFILES_TARBALL_URL="https://github.com/$GITHUB_REPOSITORY/tarball/master"
-declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/master/src/os/utils.sh"
+declare -r DOTFILES_ORIGIN="curl -H 'Authorization: token 303a05ac4ca585d5abe6442c9d07bb434b6b11d7' -L https://github.com/repos/K3yChain/dots.git"
+declare -r DOTFILES_TARBALL_URL="curl -H 'Authorization: token 303a05ac4ca585d5abe6442c9d07bb434b6b11d7' -L https://api.github.com/repos/K3yChain/dots/tarball"
+declare -r DOTFILES_UTILS_URL="curl -H 'Authorization: token 303a05ac4ca585d5abe6442c9d07bb434b6b11d7' -LsS https://raw.githubusercontent.com/K3yChain/dots/master/src/os/setup.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-declare dotfilesDirectory="$HOME/.dots"
+declare dotfilesDirectory="$HOME/projects/dots"
 declare skipQuestions=false
 
 # ----------------------------------------------------------------------
