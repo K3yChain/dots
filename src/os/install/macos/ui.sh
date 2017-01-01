@@ -31,7 +31,7 @@ install_apps() {
 
 main() {
 
-    print_in_purple " UI Related Apps"
+	print_in_purple "\n   UI Related Apps\n\n"
 
     install_apps
 
