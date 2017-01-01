@@ -25,7 +25,7 @@ install_apps() {
 
 main() {
 
-    print_info " Bash Related Apps"
+    print_in_purple " Bash Related Apps"
 
     install_apps
 
