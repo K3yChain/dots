@@ -23,6 +23,21 @@ execute "defaults write com.apple.finder WarnOnEmptyTrash -bool false" \
 
 execute "defaults write com.apple.finder FXDefaultSearchScope -string 'SCcf'" \
     "Search the current directory by default"
+	
+execute "defaults write com.apple.finder ShowStatusBar -bool true" \
+    "Show Finder Status Bar"
+	
+execute "chflags nohidden ~/Library" \
+	"Show the ~/Library folder"
+	
+execute "defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false" \
+	"Disable smart quotes as they’re annoying when typing code"
+
+execute "defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false" \
+    "Save to disk (not to iCloud) by default" \
+
+execute "defaults write com.apple.finder FXDefaultSearchScope -string “SCcf”" \
+    "When performing a search, search the current folder by defaultn"
 
 execute "defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false" \
     "Disable warning when changing a file extension"
