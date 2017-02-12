@@ -46,6 +46,9 @@ execute "defaults write -g NSDisableAutomaticTermination -bool true" \
 
 execute "defaults write -g NSNavPanelExpandedStateForSaveMode -bool true" \
     "Expand save panel by default"
+	
+execute "defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName" \
+    "Add an IP Address and OS Version Display to the OS X Login Page"
 
 execute "defaults write -g NSTableViewDefaultSizeMode -int 2" \
     "Set sidebar icon size to medium"
