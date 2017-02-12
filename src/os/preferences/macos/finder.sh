@@ -54,8 +54,8 @@ execute "/usr/libexec/PlistBuddy -c 'Set :DesktopViewSettings:IconViewSettings:g
          /usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:IconViewSettings:gridSpacing 1' ~/Library/Preferences/com.apple.finder.plist" \
     "Set icon grid spacing size"
 
-execute "/usr/libexec/PlistBuddy -c 'Set :DesktopViewSettings:IconViewSettings:textSize 10' ~/Library/Preferences/com.apple.finder.plist && \
-         /usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:IconViewSettings:textSize 10' ~/Library/Preferences/com.apple.finder.plist" \
+execute "/usr/libexec/PlistBuddy -c 'Set :DesktopViewSettings:IconViewSettings:textSize 11' ~/Library/Preferences/com.apple.finder.plist && \
+         /usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:IconViewSettings:textSize 11' ~/Library/Preferences/com.apple.finder.plist" \
     "Set icon label text size"
 
 execute "/usr/libexec/PlistBuddy -c 'Set :DesktopViewSettings:IconViewSettings:labelOnBottom true' ~/Library/Preferences/com.apple.finder.plist && \
