@@ -12,7 +12,6 @@ install_apps() {
 
 	brew_install "DropBox" "dropbox" "caskroom/cask" "cask"
     brew_install "Jaksta" "jaksta" "caskroom/cask" "cask"
-    brew_install "VMWare Fusion" "vmware-fusion" "caskroom/cask" "cask"
     brew_install "Resilio Sync (Formerly Bittorrent Sync)" "resilio-sync" "caskroom/cask" "cask"
     brew_install "Cyberduck" "cyberduck" "caskroom/cask" "cask"
     brew_install "AppCleaner" "appcleaner" "caskroom/cask" "cask"
@@ -39,10 +38,7 @@ install_apps() {
     # brew_install "Spectacle" "spectacle" "caskroom/cask" "cask"
 	# brew_install "Remote Desktop Manager" "remote-desktop-manager" "caskroom/cask" "cask"
 	# brew_install "Wondershare Video Converter Ultimate" "wondershare-video-converter-ultimate" "caskroom/cask" "cask"
-
-
-    
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	# brew_install "VMWare Fusion" "vmware-fusion" "caskroom/cask" "cask"
 
 }
 
