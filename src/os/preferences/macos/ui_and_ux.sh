@@ -47,7 +47,7 @@ execute "defaults write -g NSDisableAutomaticTermination -bool true" \
 execute "defaults write -g NSNavPanelExpandedStateForSaveMode -bool true" \
     "Expand save panel by default"
 	
-execute "defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName" \
+execute "sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName" \
     "Add an IP Address and OS Version Display to the OS X Login Page"
 
 execute "defaults write -g NSTableViewDefaultSizeMode -int 2" \
@@ -76,17 +76,17 @@ execute "sudo systemsetup -setrestartfreeze on" \
 #         sudo launchctl load /System/Library/LaunchDaemons/com.apple.blued.plist" \
 #    "Turn Bluetooth off"
 
-execute "for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-            sudo defaults write \"\${domain}\" dontAutoLoad -array \
-                '/System/Library/CoreServices/Menu Extras/TimeMachine.menu' \
-                '/System/Library/CoreServices/Menu Extras/Volume.menu' \
-				'/System/Library/CoreServices/Menu Extras/Battery.menu' \
-				'/System/Library/CoreServices/Menu Extras/Clock.menu'				
-         done \
-            && sudo defaults write com.apple.systemuiserver menuExtras -array \
-                '/System/Library/CoreServices/Menu Extras/Bluetooth.menu' \
-                '/System/Library/CoreServices/Menu Extras/AirPort.menu'
-        " \
-    "Hide Time Machine and Volume icons from the menu bar"
+#execute "for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
+#            sudo defaults write \"\${domain}\" dontAutoLoad -array \
+#                '/System/Library/CoreServices/Menu Extras/TimeMachine.menu' \
+#                '/System/Library/CoreServices/Menu Extras/Volume.menu' \
+#				'/System/Library/CoreServices/Menu Extras/Battery.menu' \
+#				'/System/Library/CoreServices/Menu Extras/Clock.menu'				
+#         done \
+#            && sudo defaults write com.apple.systemuiserver menuExtras -array \
+#                '/System/Library/CoreServices/Menu Extras/Bluetooth.menu' \
+#                '/System/Library/CoreServices/Menu Extras/AirPort.menu'
+#        " \
+#    "Hide Time Machine and Volume icons from the menu bar"
 
 killall "SystemUIServer" &> /dev/null
