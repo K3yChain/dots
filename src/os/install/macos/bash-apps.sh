@@ -16,7 +16,7 @@ install_apps() {
     brew_install "ShellCheck" "shellcheck"
     brew_install "tmux" "tmux"
     brew_install "Vim" "vim --override-system-vi"
-	brew_install "htop" "htop-osx"
+	brew_install "htop" "htop"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
