@@ -25,6 +25,7 @@ install_apps() {
 	brew_install "VLC" "vlc" "caskroom/cask" "cask"
 	brew_install "Spotify" "spotify" "caskroom/cask" "cask"
 	brew_install "CrashPlan" "crashplan" "caskroom/cask" "cask"
+	brew_install "Canary Mail" "canary" "caskroom/cask" "cask"
 	
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
