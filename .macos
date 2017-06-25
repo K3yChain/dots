@@ -225,6 +225,14 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
+# Screen Saver: Aerial
+defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Aerial" path -string "/Library/Screen Savers/Aerial.saver" type -int 0
+
+# Hot corners -> bottom left -> start screen saver
+defaults write com.apple.dock "wvous-bl-corner" -int 5
+defaults write com.apple.dock "wvous-bl-modifier" -int 0
+defaults write /Library/Preferences/com.apple.screensaver loginWindowModulePath "/Library/Screen Savers/Aerial.saver"
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
