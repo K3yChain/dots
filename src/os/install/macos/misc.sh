@@ -11,7 +11,6 @@ install_apps() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	brew_install "DropBox" "dropbox" "caskroom/cask" "cask"
-    brew_install "Jaksta" "jaksta" "caskroom/cask" "cask"
     brew_install "Resilio Sync (Formerly Bittorrent Sync)" "resilio-sync" "caskroom/cask" "cask"
     brew_install "Cyberduck" "cyberduck" "caskroom/cask" "cask"
     brew_install "AppCleaner" "appcleaner" "caskroom/cask" "cask"
