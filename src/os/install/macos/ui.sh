@@ -14,7 +14,7 @@ install_apps() {
     brew_install "Alfred" "alfred" "caskroom/cask" "cask"
     brew_install "BetterTouchTool" "bettertouchtool" "caskroom/cask" "cask"
     brew_install "iStats Menus" "istat-menus" "caskroom/cask" "cask"
-	brew_install "Aerial Screensaver" "aerial" "caskroom/cask" "cask"
+	  brew_install "Aerial Screensaver" "aerial" "caskroom/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     

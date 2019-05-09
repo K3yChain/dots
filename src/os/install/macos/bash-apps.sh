@@ -14,8 +14,8 @@ install_apps() {
     brew_install "ShellCheck" "shellcheck"
     brew_install "tmux" "tmux"
     brew_install "Vim" "vim --override-system-vi"
-	brew_install "htop" "htop"
-
+	  brew_install "htop" "htop"
+    brew_install "Google Cloud SDK" "google-cloud-sdk"
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 }
