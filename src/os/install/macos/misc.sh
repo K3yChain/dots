@@ -10,22 +10,19 @@ install_apps() {
     
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-	brew_install "DropBox" "dropbox" "caskroom/cask" "cask"
-    brew_install "Resilio Sync (Formerly Bittorrent Sync)" "resilio-sync" "caskroom/cask" "cask"
+	  brew_install "DropBox" "dropbox" "caskroom/cask" "cask"
     brew_install "Cyberduck" "cyberduck" "caskroom/cask" "cask"
     brew_install "AppCleaner" "appcleaner" "caskroom/cask" "cask"
     brew_install "iTerm2" "iterm2" "caskroom/cask" "cask"
-	brew_install "Postbox" "postbox" "caskroom/cask" "postbox"
-    brew_install "BBEdit" "bbedit" "caskroom/cask" "cask"
     brew_install "#Slack" "slack" "caskroom/cask" "cask"
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
     brew_install "Firefox" "firefox" "caskroom/cask" "cask"
     brew_install "Flash" "flash-player" "caskroom/cask" "cask"
     brew_install "The Unarchiver" "the-unarchiver" "caskroom/cask" "cask"
-	brew_install "VLC" "vlc" "caskroom/cask" "cask"
-	brew_install "Spotify" "spotify" "caskroom/cask" "cask"
-	brew_install "Sublime" "sublime-text" "caskroom/cask" "cask"
-	brew_install "1Password" "1password" "caskroom/cask" "cask"
+	  brew_install "VLC" "vlc" "caskroom/cask" "cask"
+	  brew_install "Spotify" "spotify" "caskroom/cask" "cask"
+	  brew_install "Sublime" "sublime-text" "caskroom/cask" "cask"
+	  brew_install "1Password" "1password" "caskroom/cask" "cask"
 
 	
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
