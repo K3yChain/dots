@@ -9,19 +9,19 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 install_apps() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    
-    brew_install "Bartender" "bartender" "caskroom/cask" "cask"
-    brew_install "Alfred" "alfred" "caskroom/cask" "cask"
-    brew_install "BetterTouchTool" "bettertouchtool" "caskroom/cask" "cask"
-    brew_install "iStats Menus" "istat-menus" "caskroom/cask" "cask"
-	  brew_install "Aerial Screensaver" "aerial" "caskroom/cask" "cask"
+
+    brew_install "Bartender" "bartender" "homebrew/cask" "cask"
+    brew_install "Alfred" "alfred" "homebrew/cask" "cask"
+    brew_install "BetterTouchTool" "bettertouchtool" "homebrew/cask" "cask"
+    brew_install "iStats Menus" "istat-menus" "homebrew/cask" "cask"
+	  brew_install "Aerial Screensaver" "aerial" "homebrew/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    
+
     brew_install "Web Font Tools: TTF/OTF → WOFF (Zopfli)" "sfnt2woff-zopfli" "bramstein/webfonttools"
     brew_install "Web Font Tools: TTF/OTF → WOFF" "sfnt2woff" "bramstein/webfonttools"
     brew_install "Web Font Tools: WOFF2" "woff2" "bramstein/webfonttools"
-    brew_install "Font: Meslo LG for Powerline" "font-meslo-lg-for-powerline" "caskroom/cask" "cask"
+    brew_install "Font: Meslo LG for Powerline" "font-meslo-lg-for-powerline" "homebrew/cask" "cask"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
