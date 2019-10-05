@@ -56,7 +56,7 @@ alias show-hidden-files="defaults write com.apple.finder AppleShowAllFiles -bool
 
 alias ncloud="ssh -lroot ncloud.k3ychain.net -p 5720"
 alias nbackup="ssh -lroot nbackup.k3ychain.net -p 5720"
-alias vietnam="ssh -lroot vietnam272nd.com"
+alias vietnam="ssh -lnick vietnam272nd.com -p 5720"
 alias edge="ssh -ladmin edge.k3ychain.net -p 5720"
 alias pingnc="ping 10.0.1.100"
 alias pingnb="ping 10.0.1.110"
